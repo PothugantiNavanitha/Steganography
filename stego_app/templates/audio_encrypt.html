@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2>Encrypt Audio</h2>
+  <form method="POST" enctype="multipart/form-data" action="{% url 'audio_encrypt' %}">
+    {% csrf_token %}
+    <input type="file" name="audio_file" accept=".wav" required>
+    <input type="text" name="secret_code" placeholder="Secret Code" required>
+    <textarea name="message" placeholder="Message to hide" required></textarea>
+    <button type="submit" class="bttn">Encrypt</button>
+  </form>
+</div>
+{% endblock %}

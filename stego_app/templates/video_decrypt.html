@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2>Video Decryption</h2>
+  <form method="POST" enctype="multipart/form-data" action="{% url 'video_decrypt' %}">
+    {% csrf_token %}
+    <input type="file" name="video_file" required>
+    <input type="text" name="secret_code" placeholder="Secret Code" required>
+    <button type="submit" class="bttn">Decrypt</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2>Video Encryption</h2>
+  <form method="POST" enctype="multipart/form-data" action="{% url 'video_encrypt' %}">
+    {% csrf_token %}
+    <input type="file" name="video_file" required>
+    <input type="text" name="secret_code" placeholder="Secret Code" required>
+    <textarea name="message" placeholder="Message to hide" required></textarea>
+    <button type="submit" class="bttn">Encrypt</button>
+  </form>
+</div>
+{% endblock %}

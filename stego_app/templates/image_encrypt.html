@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2>Image Encryption</h2>
+  <form method="POST" enctype="multipart/form-data" action="{% url 'image_encrypt' %}">
+    {% csrf_token %}
+    <input type="file" name="image_file" required>
+    <input type="text" name="secret_code" placeholder="Secret Code" required>
+    <textarea name="message" placeholder="Message to hide" required></textarea>
+    <button type="submit" class="bttn">Encrypt</button>
+  </form>
+</div>
+{% endblock %}

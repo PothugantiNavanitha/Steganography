@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,14 +6,14 @@
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/">Dashboard</a></li>
-      <li><a href="{% url 'image_steg' %}" >Image</a></li>
-      <li><a href="{% url 'audio_steg' %}" >Audio</a></li>
-      <li><a href="{% url 'video_steg' %}" >Video</a></li>
-    </ul>
-  </nav>
+ 
+  {% block show_navbar %}
+    <nav>
+      <ul>
+        <li><a href="/">Dashboard</a></li>
+      </ul>
+    </nav>
+  {% endblock %}
   {% if messages %}
     <ul class="messages">
       {% for message in messages %}
@@ -21,6 +21,16 @@
       {% endfor %}
     </ul>
   {% endif %}
+   {% block show_logout %}
+  <div class="logout-container">
+    <form action="{% url 'logout' %}" method="post">
+      {% csrf_token %}
+      <button style="background-color:white; width: 90px;" type="submit" class="bttn">Logout</button>
+    </form>
+  </div>
+{% endblock %}
   {% block content %}{% endblock %}
 </body>
-</html>
+</html> 
+
+

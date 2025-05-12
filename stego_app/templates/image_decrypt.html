@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2> Image Decryption</h2>
+
+  <form method="POST" enctype="multipart/form-data" action="{% url 'image_decrypt' %}">
+    {% csrf_token %}
+    <input type="file" name="image_file" required>
+    <input type="text" name="secret_code" placeholder="Secret Code" required>
+    <button type="submit" class="bttn">Decrypt</button>
+  </form>
+
+  {% if psnr_value %}
+    <div class="alert alert-info" style="margin-top: 20px;">
+      <strong>PSNR Value:</strong> {{ psnr_value }} dB
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

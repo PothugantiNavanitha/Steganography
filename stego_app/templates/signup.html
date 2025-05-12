@@ -1,13 +1,28 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block show_navbar %}{% endblock %}
+{% block show_logout %}{% endblock %}
 {% block content %}
 <div class="auth-container">
-  <h2>Signup</h2>
-  <form method="POST">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password1" placeholder="Password" required>
-    <input type="password" name="password2" placeholder="Confirm Password" required>
-    <button type="submit">Signup</button>
-  </form>
+  <h2>Sign-Up</h2>
+  
+  <div class="side">
+    <div class="login-form">
+      <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password1" placeholder="Password" required>
+        <input type="password" name="password2" placeholder="Confirm Password" required>
+        <button type="submit" class="bttn">Signup</button>
+        <hr>
+        <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+      </form>
+    </div>
+
+    <div class="login-image">
+      <img src="{% static 'images/dashboard-img1.png' %}" alt="Login Visual">
+    </div>
+  </div>
+
 </div>
 {% endblock %}

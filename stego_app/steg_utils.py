@@ -1,3 +1,5 @@
+
+
 from PIL import Image
 import numpy as np
 import cv2
@@ -75,10 +77,9 @@ def decode_audio(audio_path):
     audio.close()
     return message.replace('#####', '')
 
-# ---------- VIDEO ----------
 
-import cv2
-import numpy as np
+#------------------------video------------------
+
 
 def encode_video(video_path, message, out_path):
     cap = cv2.VideoCapture(video_path)
@@ -92,7 +93,6 @@ def encode_video(video_path, message, out_path):
     bits = ''.join([format(ord(i), '08b') for i in message])
     bit_idx = 0
     done = False
-
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -127,12 +127,12 @@ def encode_video(video_path, message, out_path):
     out.release()
 
 
+
 def decode_video(video_path):
     cap = cv2.VideoCapture(video_path)
     bits = []
     message = ''
     byte = ''
-
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -150,5 +150,4 @@ def decode_video(video_path):
                     cap.release()
                     return message.replace('#####', '')
 
-    cap.release()
-    return message.replace('#####', '')
+

@@ -1,11 +1,23 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
 {% block content %}
-<div class="container">
-  <h2>Steganography Dashboard</h2>
-  <div class="options">
-    <a href="{% url 'image_steg' %}" class="btn">Image Steganography</a>
-    <a href="{% url 'audio_steg' %}" class="btn">Audio Steganography</a>
-    <a href="{% url 'video_steg' %}" class="btn">Video Steganography</a>
+  <div class="dashboard-container">
+    {% load static %}
+    <div class="side-panel">
+      <img src="{% static 'images/dashboard-img.png' %}" alt="Side Panel Image" class="side-panel-image">
+    </div>
+    
+
+    <div class="card-column">
+      <a href="{% url 'image_steg' %}" class="card" style="height: 90px;">
+        <h2>Image Steganography</h2>
+      </a>
+      <a href="{% url 'audio_steg' %}" class="card" style="height: 90px;">
+        <h2>Audio Steganography</h2>
+      </a>
+      <a href="{% url 'video_steg' %}" class="card" style="height: 90px;">
+        <h2>Video Steganography</h2>
+      </a>
+    </div>
   </div>
-</div>
 {% endblock %}
