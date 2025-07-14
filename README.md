@@ -1,27 +1,7 @@
 
 ---
 
-## ✅ **How to use this**
-
-- **Replace**:
-  - `yourusername` with your GitHub username.
-  - The *tech stack* info with your actual tools (Python, Java, OpenCV, Tkinter, etc.)
-  - Add your real contact details & project links.
-- If you have **example images**, put them in an `assets/` folder and update the image paths.
-- Add `LICENSE` if you want (MIT recommended for open tools).
-- If you have a GUI, briefly describe how to use it.
-
----
-
-If you want, I can **generate a version with your exact language (Python/Java)** and a **custom usage example** too.  
-Want it? Just say **“Yes, generate my language version!”** 🔒✨Perfect! Here’s a **professional, clean, and personalized `README.md`** for a **Steganography Project**, tailored **specifically for Pothuganti Navanitha** — with a tech-oriented tone, clear structure, and a personal touch.
-
-You can **copy-paste** this directly to your project’s `README.md`.
-Feel free to adjust your tech stack if you’re using Python, Java, or any other language.
-
----
-
-## ✅ **Steganography Tool — README.md for Pothuganti Navanitha**
+## ✅ **Steganography Tool **
 
 ````markdown
 # 🕵️‍♀️ Steganography Tool
@@ -158,19 +138,3 @@ This project is licensed under the **MIT License** — feel free to use and impr
 
 ```
 
----
-
-## ✅ **How this is customized**
-
-✔️ **Uses your name** & real contact  
-✔️ **Highlights your tech stack & skills**  
-✔️ **Clear structure for students, recruiters, or peers**  
-✔️ Ready to **copy-paste** as `README.md`  
-
-If you’d like, I can:
-- Package it as a file (`README.md`)
-- Help you write the `requirements.txt`  
-- Or generate a simple `encoder.py` / `decoder.py` starter script
-
-**Want that? Just say:** *“Yes, share the code too!”* 🔍✨
-```
